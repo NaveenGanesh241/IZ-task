@@ -1,0 +1,30 @@
+.head{
+    color:white;
+    height:60px;
+    width:100%;
+    background-color: rgb(63, 125, 88);
+    position: sticky;
+}
+.name{
+    font-size: 200%;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 20px;  
+    /* padding-top: 100px;  */
+}
+nav{
+    float:right;
+    margin-top: 10px;
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    padding:20px;
+}
+.matbtn{
+    height:35px;
+    background-color: rgba(39, 3, 28, 0.582);
+    border:2px solid rgb(255, 255, 255);
+    margin-right:5px;
+}
+

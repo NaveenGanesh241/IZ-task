@@ -1,0 +1,115 @@
+<mat-tab-group >
+    <mat-tab label="SignIn" class="headtab"> 
+        <mat-card class="matcard1">
+            <mat-card-header>
+                <h1>SIGN IN</h1>
+            </mat-card-header>
+            <mat-card-content>
+                <form #signin="ngForm" (ngSubmit)="signinFuncion()">
+                    <div class="formin">
+                      <label class="inlabel">Email</label>
+                      <input type="email" class="incontrol" id="email" placeholder="Email" [(ngModel)]="signinForm.mail"  required maxlength="32" [pattern]="emailregex" name="mail" #mail="ngModel" [ngClass]="{error:mail.errors && mail.touched}">
+                      <div *ngIf="mail.errors && mail.touched" >
+                        <small *ngIf="mail.errors['required']"class="errormsg">Enter the mail</small>
+                        <small *ngIf="mail.errors['pattern']"class="errormsg">Enter the valid mail</small>
+        
+                      </div>
+                    </div>
+        
+                    <div class="formin">
+                      <label class="inlabel">Password</label>
+                      <input type="password" class="incontrol" id="password" placeholder="password" [(ngModel)]="signinForm.password" name="password" #password="ngModel" required minlength="8" maxlength="12">
+                      <div *ngIf="password.errors && password.touched" >
+                        <small *ngIf="password.errors['required']"class="errormsg">Enter the Password</small>
+                        <small *ngIf="password.errors['minlength'] && password.errors['maxlength']" class="errormsg">Password should be min 8 and max 12 character</small>
+        
+                      </div>
+                    </div>
+        
+                    <div class="formin">
+                      <input type="submit" class="sbtn" type="submit" [disabled]="signin.invalid" value="Go">
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+
+    <!-- SIGNUP -->
+    <mat-tab label="SignUp" class="headtab">
+        <mat-card class="matcard2">
+            <mat-card-header>
+                <h1>SIGN UP</h1>
+            </mat-card-header>
+            <mat-card-content>
+              <form [formGroup]="signupForm" (ngSubmit)="signupForm.status!=='INVALID' && signupfn()">
+                <div class="in">
+                <div class="row">
+                <div class="formval">
+                    <label class="formlabel">Name</label>
+                    <input type="text" class="formcontrol" id="name" placeholder="Name" formControlName="name" [ngClass]="{error : getcontrol('name')?.errors && getcontrol('name')?.touched}">
+                    <div *ngIf="getcontrol('name')?.errors && getcontrol('name')?.touched">
+                        <small class="warn" *ngIf="getcontrol('name')?.errors?.['required']">Name is required</small>
+                        <small class="warn" *ngIf="getcontrol('name')?.errors?.['maxlength']">Exceeding max length</small>
+                    </div>
+                    </div>
+
+                    <div class="formval">
+                        <label class="formlabel">Email</label>
+                        <input type="email" class="formcontrol" id="email" placeholder="Email" formControlName="email" [ngClass]="{error : getcontrol('email')?.errors && getcontrol('email')?.touched}">
+                        <div *ngIf="getcontrol('email')?.errors && getcontrol('email')?.touched">
+                            <small class="warn" *ngIf="getcontrol('email')?.errors?.['required']">Mail is required</small>
+                            <small class="warn" *ngIf="getcontrol('email')?.errors?.['maxlength']">Exceeding max length</small>
+                            <small class="warn" *ngIf="getcontrol('email')?.errors?.['email']">Enter valid mail</small>
+                        </div>
+                </div>        
+                </div>
+                <div class="row">
+                    <div class="formval">
+                        <label class="formlabel">Phone</label>
+                        <input type="text" class="formcontrol" id="phone" placeholder="Phone" formControlName="phone" [ngClass]="{error : getcontrol('phone')?.errors && getcontrol('phone')?.touched}">
+                        <div *ngIf="getcontrol('phone')?.errors && getcontrol('phone')?.touched">
+                            <small class="warn" *ngIf="getcontrol('phone')?.errors?.['required']">Mobile number is required</small>
+                            <small class="warn" *ngIf="getcontrol('phone')?.errors?.['maxlength']">Enter valid Number</small>
+                            <small class="warn" *ngIf="getcontrol('phone')?.errors?.['minlength']">Enter valid number</small>
+                        </div>
+                </div>
+                <div class="formval">
+                    <label class="formlabel">Location</label>
+                    <input type="text" class="formcontrol" id="location" placeholder="Location" formControlName="location" [ngClass]="{error : getcontrol('location')?.errors && getcontrol('location')?.touched}">
+                    <div *ngIf="getcontrol('location')?.errors && getcontrol('location')?.touched">
+                        <small class="warn" *ngIf="getcontrol('phone')?.errors?.['required']">Location is required</small>
+                    </div>
+            </div>
+                </div>
+
+                <div class="row">
+                    <div class="formval">
+                        <label class="formlabel">Password</label>
+                        <input type="password" class="formcontrol" id="password" placeholder="Password" formControlName="password" [ngClass]="{error : getcontrol('password')?.errors && getcontrol('password')?.touched}">
+                        <div *ngIf="getcontrol('password')?.errors && getcontrol('password')?.touched">
+                            <small class="warn" *ngIf="getcontrol('password')?.errors?.['required']">Password is required</small>
+                            <small class="warn" *ngIf="getcontrol('password')?.errors?.['maxlength']">Password is too long </small>
+                            <small class="warn" *ngIf="getcontrol('password')?.errors?.['minlength']">Password is too short</small>
+                        </div>
+                </div>
+                <div class="formval">
+                <label class="formlabel">Confirm_Password</label>
+                        <input type="password" class="formcontrol" id="Confirm_password" placeholder="confirm_password" formControlName="confirm_password" [ngClass]="{error : getcontrol('confirm_password')?.errors && getcontrol('confirm_password')?.touched}">
+                        <div *ngIf="getcontrol('confirm_password')?.errors && getcontrol('confirm_password')?.touched">
+                            <small class="warn" *ngIf="getcontrol('confirm_password')?.errors?.['required']">confirm_password is required</small>
+                            <small class="warn" *ngIf="getcontrol('confirm_password')?.errors?.['maxlength']">confirm_password is too long </small>
+                            <small class="warn" *ngIf="getcontrol('confirm_password')?.errors?.['minlength']">confirm_password is too short</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub">
+                <input type="submit" class="submit" [disabled]="signupForm.status=='INVALID' " value="SignUp">
+            </div>
+    </form>
+
+            </mat-card-content>
+        </mat-card>
+
+    </mat-tab>
+  </mat-tab-group>
