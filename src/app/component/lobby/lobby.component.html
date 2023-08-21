@@ -21,8 +21,9 @@
                       <input type="password" class="incontrol" id="password" placeholder="password" [(ngModel)]="signinForm.password" name="password" #password="ngModel" required minlength="8" maxlength="12">
                       <div *ngIf="password.errors && password.touched" >
                         <small *ngIf="password.errors['required']"class="errormsg">Enter the Password</small>
-                        <small *ngIf="password.errors['minlength'] && password.errors['maxlength']" class="errormsg">Password should be min 8 and max 12 character</small>
-        
+                        <small *ngIf="password.errors['minlength']" class="errormsg">Password is too short</small>
+                        <small *ngIf="password.errors['maxlength']" class="errormsg">Password is too long</small>
+
                       </div>
                     </div>
         

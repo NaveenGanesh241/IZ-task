@@ -14,6 +14,15 @@ import { HeaderComponent } from './component/header/header.component'
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { AdminComponent } from './component/admin/admin.component';
+import { DatacontrolComponent } from './component/datacontrol/datacontrol.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DataformComponent } from './component/dataform/dataform.component'
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input'
+import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort'
+import {MatPaginatorModule} from '@angular/material/paginator'
 
 @NgModule({
   declarations: [
@@ -21,7 +30,9 @@ import { AdminComponent } from './component/admin/admin.component';
     LobbyComponent,
     HomeComponent,
     HeaderComponent,
-    AdminComponent
+    AdminComponent,
+    DatacontrolComponent,
+    DataformComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +44,14 @@ import { AdminComponent } from './component/admin/admin.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
-    
+    MatMenuModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

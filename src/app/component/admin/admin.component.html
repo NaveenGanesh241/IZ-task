@@ -14,7 +14,7 @@
 
     <div class="formin">
       <label class="inlabel">Password</label>
-      <input type="password" class="incontrol" id="password" placeholder="password" [(ngModel)]="adminloginform.password" name="password" #password="ngModel" required minlength="8" maxlength="12">
+      <input type="password" class="incontrol" id="password" placeholder="password" [(ngModel)]="adminloginform.password" name="password" #password="ngModel" required minlength="8" [pattern]="passwordregex" maxlength="12" >
       <div *ngIf="password.errors && password.touched" >
         <small *ngIf="password.errors['required']"class="errormsg">Enter the Password</small>
         <small *ngIf="password.errors['minlength'] && password.errors['maxlength']" class="errormsg">Password should be min 8 and max 12 character</small>

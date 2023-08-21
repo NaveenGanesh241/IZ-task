@@ -1,19 +1,23 @@
 import { Component, ViewChild } from '@angular/core';
-import {NgForm} from '@angular/forms'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
-  // @ViewChild('adminlogin') adminlogin!:NgForm
+constructor( private router:Router){}
+
+
   adminloginform={
     email:'',
     password:''
   }
-  emailregex=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
+  emailregex = "admin@gmail.com"
+  passwordregex="Admin@123"
   adminfn(){
     console.log(this.adminloginform)
+    console.log("adminlogin works")
+    this.router.navigate(['admin/data'])
   }
 }

@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "product": [
+    {
+      "brand": "Peter England",
+      "productname": "Shirt",
+      "image": "url",
+      "price": "1399",
+      "offer": "40%",
+      "stock": "130 stocks left",
+      "size": "S, M, L, Xl, XXl",
+      "id": 1
+    },
+    {
+      "brand": "Adidas",
+      "productname": "Shoe",
+      "image": "url",
+      "price": "1200",
+      "offer": "12%",
+      "stock": "18 stocks available",
+      "size": "7,8,9,10",
+      "id": 2
+    },
+    {
+      "brand": "Otto",
+      "productname": "Cotton Pant",
+      "image": "url",
+      "price": "899",
+      "offer": "10%",
+      "stock": "7 stock available",
+      "size": "32,34,36.38,40",
+      "id": 3
+    }
+  ]
+}
