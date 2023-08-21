@@ -3,3 +3,6 @@
     float:right;
     margin-right: 50px;
 }
+.mat-column-image{
+   overflow-x:hidden;
+}

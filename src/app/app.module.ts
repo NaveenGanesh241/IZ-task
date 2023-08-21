@@ -22,7 +22,9 @@ import {MatInputModule} from '@angular/material/input'
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort'
-import {MatPaginatorModule} from '@angular/material/paginator'
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { HomeitemsComponent } from './component/homeitems/homeitems.component';
+import { ItemComponent } from './component/item/item.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {MatPaginatorModule} from '@angular/material/paginator'
     HeaderComponent,
     AdminComponent,
     DatacontrolComponent,
-    DataformComponent
+    DataformComponent,
+    HomeitemsComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
