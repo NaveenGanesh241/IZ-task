@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +24,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort'
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HomeitemsComponent } from './component/homeitems/homeitems.component';
-import { ItemComponent } from './component/item/item.component'
+import { ItemComponent } from './component/item/item.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+
 
 @NgModule({
   declarations: [
@@ -55,9 +58,12 @@ import { ItemComponent } from './component/item/item.component'
     HttpClientModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxSpinnerModule,
+    NgxMatSelectSearchModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

@@ -5,6 +5,8 @@ import { ProductService } from 'src/app/service/product.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import {Chart,registerables} from '../../../../node_modules/chart.js';
+Chart.register(...registerables)
 
 @Component({
   selector: 'app-datacontrol',
@@ -12,6 +14,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./datacontrol.component.css']
 })
 export class DatacontrolComponent implements OnInit{
+
 
   displayedColumns: string[] = [
     'id',
@@ -32,8 +35,25 @@ export class DatacontrolComponent implements OnInit{
 
  constructor(private dialog:MatDialog ,
    private productservice:ProductService){}
+
+   chartdata:any;
+   labeldata:any[]=[]
+   realdata:any[]=[]
+
  ngOnInit(): void {
+  this.productservice.showproduct().subscribe(result=>{
+    this.chartdata=result
+    if(this.chartdata!=null){
+      for(let i=0;i<this.chartdata.length;i++)
+      {
+        // console.log(this.chartdata[i])
+        this.labeldata.push(this.chartdata[i].productname)
+        this.realdata.push(this.chartdata[i].stock)
+      }
+    }
+  })
   this.showproduct()
+  this.chart(this.labeldata,this.realdata)
  }
 
  open(){
@@ -89,4 +109,34 @@ updateproduct(data:any){
     },
   })
 }
+
+chart(labedata:any,realdata:any){
+  
+const ctx = new Chart('myChart' ,{
+    type: 'bar',
+    data: {
+        labels: labedata,
+        datasets: [{
+            label: '# of Votes',
+            data: realdata,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(0,255,255,0.2)',
+                'rgba(0,128,0,0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+  }
 }

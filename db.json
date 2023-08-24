@@ -25,7 +25,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT2tTyC7sphwShPpqv4B7cHY1LMwkkgmui0nELjsN0R96bkLmZS5N5oKSr29HKdG5ZeIPb_PWKZZd_ez-SNUq9pLEuj1moM1NQVEjgIkii1T9CefV9dveUnRw&usqp=CAc",
       "price": "1399",
       "offer": "40%",
-      "stock": "130 stocks left",
+      "stock": "130 ",
       "size": "S, M, L, Xl, XXl",
       "id": 1
     },
@@ -35,7 +35,7 @@
       "image": "url",
       "price": "1200",
       "offer": "12%",
-      "stock": "18 stocks available",
+      "stock": "18 ",
       "size": "7,8,9,10",
       "id": 2
     },
@@ -45,9 +45,19 @@
       "image": "url",
       "price": "899",
       "offer": "10%",
-      "stock": "7 stock available",
+      "stock": "7",
       "size": "32,34,36.38,40",
       "id": 3
+    },
+    {
+      "brand": "TeamSpirit",
+      "productname": "T shirt",
+      "image": "url",
+      "price": "399",
+      "offer": "8%",
+      "stock": "88",
+      "size": "S,M,L,XL,XXL",
+      "id": 4
     }
   ]
 }

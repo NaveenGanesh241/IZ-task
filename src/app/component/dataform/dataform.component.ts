@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ProductService } from 'src/app/service/product.service';
@@ -13,10 +13,11 @@ constructor(private dialog:MatDialogRef<DataformComponent>,
   private productservice:ProductService,
   @Inject(MAT_DIALOG_DATA) public data:any
   ){}
+ 
  ngOnInit(): void {
    this.productdetail.patchValue(this.data)
  }
-
+ val:boolean=true;
   productdetail = new FormGroup({
     brand:new FormControl("",[Validators.required]),
     productname: new FormControl("",[Validators.required]),

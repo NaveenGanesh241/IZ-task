@@ -1,6 +1,8 @@
 <div mat-dialog-title>
     <h1>Product Form</h1>
 </div>
+
+<ng-template [ngIf]="val" >
 <div mat-dialog-content>
     <form [formGroup]="productdetail" (ngSubmit)="saveproduct()">
 
@@ -70,4 +72,6 @@
         <button mat-raised-button color="primary" type="submit" >{{data ? 'Update' :'Add' }}</button>
     </div>
     </form>
+
 </div>
+</ng-template >

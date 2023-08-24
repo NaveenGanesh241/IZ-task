@@ -6,3 +6,7 @@
 .mat-column-image{
    overflow-x:hidden;
 }
+.dummy{
+    height:400px;
+    width:600px
+}
