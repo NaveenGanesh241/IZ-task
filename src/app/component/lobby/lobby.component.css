@@ -101,6 +101,7 @@ mat-tab-group{
    margin:0px;
    background-image: url('bg.jpg');
    background-size: cover;
+   background-position-y: 48px;
 }
 .headtab{
     background-color: rgb(63, 125, 88);
