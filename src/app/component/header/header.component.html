@@ -1,15 +1,19 @@
 <div class="head">
-    <a class="name">Fashion</a>
-    <nav>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Kids</a>
-        <a href="#">Accessories</a>
-        <a href="#"class="nav2">Wishlist</a>
-        <a href="#"class="nav2">Cart</a>
-        <button mat-mini-fab	 [matMenuTriggerFor]="menu" class="matbtn"><mat-icon style="color:rgb(255, 255, 255); padding: 0px;">perm_identity</mat-icon></button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="logout()">LogOut</button>
-          <button mat-menu-item (click)="admin()">Admin</button>
-        </mat-menu>
-    </nav>
+  <a class="name">Fashion</a>
+  <button mat-mini-fab [matMenuTriggerFor]="menu" class="matbtn"><mat-icon
+    style="color:rgb(255, 255, 255); padding: 0px;">perm_identity</mat-icon></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="logout()">LogOut</button>
+  <button mat-menu-item (click)="admin()">Admin</button>
+</mat-menu>
+  <nav>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Accessories</a>
+    <a href="#" class="nav2">Wishlist</a>
+    <a href="#" class="nav2">Cart</a>
+   
+  </nav>
+  </div>
+ 

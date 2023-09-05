@@ -1,7 +1,22 @@
-mat-form-field{
-    padding:10px 10px 0px 0px;
+mat-form-field {
+    padding: 10px 10px 0px 0px;
 }
 
-.ip{
-    width:48%
+.ip {
+    width: 48%
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btn1 {
+    width: 20%;
+    background-color: gray;
+}
+
+.btn2 {
+    width: 20%;
+
 }

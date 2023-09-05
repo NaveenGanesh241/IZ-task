@@ -21,7 +21,7 @@
   "product": [
     {
       "brand": "Peter England",
-      "productname": "Shirt",
+      "productname": "Shirts",
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT2tTyC7sphwShPpqv4B7cHY1LMwkkgmui0nELjsN0R96bkLmZS5N5oKSr29HKdG5ZeIPb_PWKZZd_ez-SNUq9pLEuj1moM1NQVEjgIkii1T9CefV9dveUnRw&usqp=CAc",
       "price": "1399",
       "offer": "40%",
@@ -32,7 +32,7 @@
     {
       "brand": "Adidas",
       "productname": "Shoe",
-      "image": "url",
+      "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/v/3/e/-original-imagqfwcyyw9avvg.jpeg?q=90",
       "price": "1200",
       "offer": "12%",
       "stock": "18 ",
@@ -42,7 +42,7 @@
     {
       "brand": "Otto",
       "productname": "Cotton Pant",
-      "image": "url",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeeEbf5YMOnBm_GJd-O8AORDOrxJIfjtg7bwqWAmizLIMZ4DQ3o6ychWy2N8vZ3zZI-AI&usqp=CAU",
       "price": "899",
       "offer": "10%",
       "stock": "7",
@@ -52,12 +52,44 @@
     {
       "brand": "TeamSpirit",
       "productname": "T shirt",
-      "image": "url",
+      "image": "data:image/jpeg;base64,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",
       "price": "399",
       "offer": "8%",
       "stock": "88",
       "size": "S,M,L,XL,XXL",
       "id": 4
+    },
+    {
+      "brand": "Allen Solly",
+      "productname": "Shirt",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTpIEwVckEeELWbRJz3kk7xN1HYM4mDmhKw&usqp=CAU",
+      "price": "999",
+      "offer": "5%",
+      "stock": "87",
+      "size": "S, M,L ,XL",
+      "id": 5
+    }
+  ],
+  "signup": [
+    {
+      "name": "a",
+      "email": "as@s",
+      "phone": "1234567890",
+      "location": "ASDF",
+      "gender": "Male",
+      "password": "12122121",
+      "confirm_password": "212121212",
+      "id": 1
+    },
+    {
+      "name": "asdf",
+      "email": "asdf@s",
+      "phone": "1234567890",
+      "location": "sdf",
+      "gender": "Female",
+      "password": "12212112",
+      "confirm_password": "12122121",
+      "id": 2
     }
   ]
 }

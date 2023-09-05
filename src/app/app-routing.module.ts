@@ -6,10 +6,10 @@ import { AdminComponent } from './component/admin/admin.component';
 import { DatacontrolComponent } from './component/datacontrol/datacontrol.component';
 
 const routes: Routes = [
-  {path:'',component:LobbyComponent},
-  {path:'home',component:HomeComponent},
-  {path:'admin',component:AdminComponent},
-  {path:'admin/data',component:DatacontrolComponent}
+  { path: '', component: LobbyComponent },
+  { path: 'home/:login', component: HomeComponent, data: { breadcrumb: 'Home' } },
+  { path: 'admin', component: AdminComponent, data: { breadcrumb: 'Admin' } },
+  { path: 'admin/data', component: DatacontrolComponent, data: { breadcrumb: 'Table' } }
 ];
 
 @NgModule({

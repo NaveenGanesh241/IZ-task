@@ -1,4 +1,17 @@
-.list{
-    background-color: rgba(83, 154, 90, 0.467);
-    width:208px
+.list {
+    background-color: rgba(180, 204, 182, 0.467);
+    width: 150px;
+    border-radius: 5%;
+    border: 0px solid;
+    margin: 20px;
+    font-size: x-small;
+}
+
+.list:hover {
+    border: 2px solid black;
+    font-size: small;
+}
+
+p {
+    margin-top: -10px;
 }

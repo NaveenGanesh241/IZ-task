@@ -1,77 +1,93 @@
 <div mat-dialog-title>
     <h1>Product Form</h1>
 </div>
+<mat-divider></mat-divider>
+<ng-template [ngIf]="val">
+    <div mat-dialog-content>
+        <form [formGroup]="productdetail" (ngSubmit)="saveproduct()">
 
-<ng-template [ngIf]="val" >
-<div mat-dialog-content>
-    <form [formGroup]="productdetail" (ngSubmit)="saveproduct()">
+            <div class="row">
+                <mat-form-field appearance="outline" class="ip">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput type="text" formControlName="productname"
+                        [ngClass]="{error : getcontrol('productname')?.errors && getcontrol('productname')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('productname')?.errors && getcontrol('productname')?.touched">
+                        <small class="warn" *ngIf="getcontrol('productname')?.errors?.['required']">Enter productname
+                        </small>
+                    </div>
+                </mat-form-field>
 
-        <div class="row">
-        <mat-form-field appearance="outline" class="ip">
-            <mat-label>Product Name</mat-label>
-            <input matInput type="text" formControlName="productname" [ngClass]="{error : getcontrol('productname')?.errors && getcontrol('productname')?.touched}" >
-            <div *ngIf="getcontrol('productname')?.errors && getcontrol('productname')?.touched">
-                <small class="warn" *ngIf="getcontrol('productname')?.errors?.['required']">Enter productname </small>
-              </div>
-        </mat-form-field>
+                <mat-form-field appearance="outline" class="ip">
+                    <mat-label>Brand</mat-label>
+                    <input matInput type="text" formControlName="brand"
+                        [ngClass]="{error : getcontrol('brand')?.errors && getcontrol('brand')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('brand')?.errors && getcontrol('brand')?.touched">
+                        <small class="warn" *ngIf="getcontrol('brand')?.errors?.['required']">Enter brand </small>
+                    </div>
+                </mat-form-field>
+            </div>
 
-        <mat-form-field appearance="outline" class="ip">
-            <mat-label>Brand</mat-label>
-            <input matInput type="text" formControlName="brand" [ngClass]="{error : getcontrol('brand')?.errors && getcontrol('brand')?.touched}">
-            <div *ngIf="getcontrol('brand')?.errors && getcontrol('brand')?.touched">
-                <small class="warn" *ngIf="getcontrol('brand')?.errors?.['required']">Enter brand </small>
-              </div>
-        </mat-form-field>
+            <div class="row">
+                <mat-form-field appearance="outline" class="ip">
+                    <mat-label>Image</mat-label>
+                    <input matInput type="text" formControlName="image"
+                        [ngClass]="{error : getcontrol('image')?.errors && getcontrol('image')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('image')?.errors && getcontrol('image')?.touched">
+                        <small class="warn" *ngIf="getcontrol('image')?.errors?.['required']">Enter image </small>
+                    </div>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="ip">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="text" formControlName="price"
+                        [ngClass]="{error : getcontrol('price')?.errors && getcontrol('price')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('price')?.errors && getcontrol('price')?.touched">
+                        <small class="warn" *ngIf="getcontrol('price')?.errors?.['required']">Enter price </small>
+                    </div>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Offer</mat-label>
+                    <input matInput type="text" formControlName="offer"
+                        [ngClass]="{error : getcontrol('offer')?.errors && getcontrol('offer')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('offer')?.errors && getcontrol('offer')?.touched">
+                        <small class="warn" *ngIf="getcontrol('offer')?.errors?.['required']">Enter offer </small>
+                    </div>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Stock</mat-label>
+                    <input matInput type="text" formControlName="stock"
+                        [ngClass]="{error : getcontrol('stock')?.errors && getcontrol('stock')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('stock')?.errors && getcontrol('stock')?.touched">
+                        <small class="warn" *ngIf="getcontrol('stock')?.errors?.['required']">Enter stock </small>
+                    </div>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Size</mat-label>
+                    <input matInput type="text" formControlName="size"
+                        [ngClass]="{error : getcontrol('size')?.errors && getcontrol('size')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('size')?.errors && getcontrol('size')?.touched">
+                        <small class="warn" *ngIf="getcontrol('size')?.errors?.['required']">Enter size </small>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div mat-dialog-actions class="btns">
+                <button mat-raised-button type="button" [mat-dialog-close]="false" class="btn1">Cancel</button>
+                <button mat-raised-button color="primary" type="submit" class="btn2" [hidden]="value1">{{data ? 'Update'
+                    :'Add' }}</button>
+            </div>
+        </form>
+
     </div>
-
-    <div class="row">
-        <mat-form-field appearance="outline" class="ip">
-            <mat-label>Image</mat-label>
-            <input matInput type="text" formControlName="image" [ngClass]="{error : getcontrol('image')?.errors && getcontrol('image')?.touched}">
-            <div *ngIf="getcontrol('image')?.errors && getcontrol('image')?.touched">
-                <small class="warn" *ngIf="getcontrol('image')?.errors?.['required']">Enter image </small>
-              </div>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="ip">
-            <mat-label>Price</mat-label>
-            <input matInput type="text" formControlName="price" [ngClass]="{error : getcontrol('price')?.errors && getcontrol('price')?.touched}">
-            <div *ngIf="getcontrol('price')?.errors && getcontrol('price')?.touched">
-                <small class="warn" *ngIf="getcontrol('price')?.errors?.['required']">Enter price </small>
-              </div>
-        </mat-form-field>
-    </div>
-
-    <div class="row">
-        <mat-form-field appearance="outline">
-            <mat-label>Offer</mat-label>
-            <input matInput type="text" formControlName="offer"[ngClass]="{error : getcontrol('offer')?.errors && getcontrol('offer')?.touched}">
-            <div *ngIf="getcontrol('offer')?.errors && getcontrol('offer')?.touched">
-                <small class="warn" *ngIf="getcontrol('offer')?.errors?.['required']">Enter offer </small>
-              </div>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Stock</mat-label>
-            <input matInput type="text" formControlName="stock" [ngClass]="{error : getcontrol('stock')?.errors && getcontrol('stock')?.touched}">
-            <div *ngIf="getcontrol('stock')?.errors && getcontrol('stock')?.touched">
-                <small class="warn" *ngIf="getcontrol('stock')?.errors?.['required']">Enter stock </small>
-              </div>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Size</mat-label>
-            <input matInput type="text" formControlName="size" [ngClass]="{error : getcontrol('size')?.errors && getcontrol('size')?.touched}">
-            <div *ngIf="getcontrol('size')?.errors && getcontrol('size')?.touched">
-                <small class="warn" *ngIf="getcontrol('size')?.errors?.['required']">Enter size </small>
-              </div>
-        </mat-form-field>
-    </div>
-    <div mat-dialog-actions>
-        <button mat-raised-button type="button" [mat-dialog-close]="false" >Cancel</button>
-        <button mat-raised-button color="primary" type="submit" >{{data ? 'Update' :'Add' }}</button>
-    </div>
-    </form>
-
-</div>
-</ng-template >
+</ng-template>

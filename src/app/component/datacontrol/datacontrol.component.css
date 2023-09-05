@@ -1,12 +1,26 @@
-.btn{
-    margin-top: 50px;
-    float:right;
-    margin-right: 50px;
+.btn {
+    margin: 20px 30px 10px 0px;
+    float: right;
 }
-.mat-column-image{
-   overflow-x:hidden;
+
+.btn1 {
+    margin: 20px 30px 10px 0px;
+    float: right;
 }
-.dummy{
-    height:400px;
-    width:600px
+
+.mat-column-image {
+    overflow-x: hidden;
+}
+
+.dummy {
+    height: 400px;
+    width: 600px
+}
+
+.filter {
+    width: 100%
+}
+
+.classA {
+    max-width: 300px !important;
 }
