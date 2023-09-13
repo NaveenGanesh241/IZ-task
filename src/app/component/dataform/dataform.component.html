@@ -52,7 +52,7 @@
             </div>
 
             <div class="row">
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" style="width:23%">
                     <mat-label>Offer</mat-label>
                     <input matInput type="text" formControlName="offer"
                         [ngClass]="{error : getcontrol('offer')?.errors && getcontrol('offer')?.touched}"
@@ -62,9 +62,9 @@
                     </div>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" style="width:23%">
                     <mat-label>Stock</mat-label>
-                    <input matInput type="text" formControlName="stock"
+                    <input matInput type="text" formControlName="stock" 
                         [ngClass]="{error : getcontrol('stock')?.errors && getcontrol('stock')?.touched}"
                         [readonly]="value1">
                     <div *ngIf="getcontrol('stock')?.errors && getcontrol('stock')?.touched">
@@ -72,13 +72,24 @@
                     </div>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" style="width:23%">
                     <mat-label>Size</mat-label>
-                    <input matInput type="text" formControlName="size"
+                    <input matInput type="text" formControlName="size" 
                         [ngClass]="{error : getcontrol('size')?.errors && getcontrol('size')?.touched}"
                         [readonly]="value1">
                     <div *ngIf="getcontrol('size')?.errors && getcontrol('size')?.touched">
                         <small class="warn" *ngIf="getcontrol('size')?.errors?.['required']">Enter size </small>
+                    </div>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" style="width:23%">
+                    <mat-label>Like Value</mat-label>
+                    <input matInput type="text" formControlName="like" 
+                        [ngClass]="{error : getcontrol('like')?.errors && getcontrol('like')?.touched}"
+                        [readonly]="value1">
+                    <div *ngIf="getcontrol('like')?.errors && getcontrol('like')?.touched">
+                        <small class="warn" *ngIf="getcontrol('size')?.errors?.['required']">Enter like value</small>
                     </div>
                 </mat-form-field>
             </div>

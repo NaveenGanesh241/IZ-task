@@ -30,7 +30,8 @@ export class DataformComponent implements OnInit {
     price: new FormControl("", [Validators.required]),
     offer: new FormControl("", [Validators.required]),
     stock: new FormControl("", [Validators.required]),
-    size: new FormControl("", [Validators.required])
+    size: new FormControl("", [Validators.required]),
+    like: new FormControl("",[Validators.required])
   })
 
   getcontrol(name: any): AbstractControl | null {

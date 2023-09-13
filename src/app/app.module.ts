@@ -32,6 +32,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AdvertisementComponent } from './component/advertisement/advertisement.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
+import { WishlistItemComponent } from './component/wishlist-item/wishlist-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import { AdvertisementComponent } from './component/advertisement/advertisement.
     HomeitemsComponent,
     ItemComponent,
     CommonTableComponent,
-    AdvertisementComponent
+    AdvertisementComponent,
+    WishlistComponent,
+    WishlistItemComponent
   ],
   imports: [
     BrowserModule,

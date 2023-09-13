@@ -1,5 +1,6 @@
 <div class="head">
-  <a class="name">Fashion</a>
+  <span style="margin-top:20px">
+  <a class="name">Fashion</a></span>
   <button mat-mini-fab [matMenuTriggerFor]="menu" class="matbtn"><mat-icon
     style="color:rgb(255, 255, 255); padding: 0px;">perm_identity</mat-icon></button>
 <mat-menu #menu="matMenu">
@@ -11,9 +12,12 @@
     <a href="#">Women</a>
     <a href="#">Kids</a>
     <a href="#">Accessories</a>
-    <a href="#" class="nav2">Wishlist</a>
+    <a routerLink ="/product/wishlist" class="nav2">Wishlist</a>
     <a href="#" class="nav2">Cart</a>
    
   </nav>
   </div>
+ 
+
+
  

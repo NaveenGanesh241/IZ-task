@@ -11,7 +11,7 @@ import { SignupService } from 'src/app/service/signup.service';
 export class LobbyComponent implements OnInit {
   ngOnInit(): void {
     this.showusers()
-    console.log(this.usersdata)
+    // console.log(this.usersdata)
 
 
   }

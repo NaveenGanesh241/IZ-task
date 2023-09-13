@@ -4,12 +4,15 @@ import { LobbyComponent } from './component/lobby/lobby.component';
 import { HomeComponent } from './component/home/home.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { DatacontrolComponent } from './component/datacontrol/datacontrol.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', component: LobbyComponent },
-  { path: 'home/:login', component: HomeComponent, data: { breadcrumb: 'Home' } },
-  { path: 'admin', component: AdminComponent, data: { breadcrumb: 'Admin' } },
-  { path: 'admin/data', component: DatacontrolComponent, data: { breadcrumb: 'Table' } }
+  { path: 'home/:login', component: HomeComponent},
+  { path: 'admin', component: AdminComponent},
+  { path: 'admin/data', component: DatacontrolComponent},
+  { path: 'product/wishlist', component: WishlistComponent}
+
 ];
 
 @NgModule({
