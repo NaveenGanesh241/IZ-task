@@ -1,3 +1,5 @@
 <app-header></app-header>
 <h2 style="margin-left: 30px;margin-top: 30px;">My Wishlist</h2>
-<app-wishlist-item *ngFor="let item of products" [products]="item"></app-wishlist-item>
+<div style="display: flex;">
+    <app-wishlist-item *ngFor="let item of products" [products]="item"></app-wishlist-item>
+</div>

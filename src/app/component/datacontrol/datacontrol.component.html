@@ -73,9 +73,18 @@
         <button mat-icon-button color="primary" (click)="updateproduct(row)" #tooltip="matTooltip" matTooltip="Edit">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-icon-button color="warn" (click)="deleteproduct(row.id)" #tooltip="matTooltip" matTooltip="Delete">
+        <button mat-icon-button color="warn" (click)="openDialog(deleteDialog)" #tooltip="matTooltip" matTooltip="Delete">
           <mat-icon>delete</mat-icon>
         </button>
+        <ng-template #deleteDialog>
+          <div style="margin:30px;">
+            <h2>Are you sure to delete this Product?</h2>
+            <button mat-raised-button color="primary" (click)="closeDialog()">NO
+            </button>
+            <button mat-raised-button color="warn" (click)="deleteproduct(row.id)" style="margin-left: 30px;">YES,Delete
+            </button>
+          </div>
+        </ng-template>
         <button mat-icon-button style="color:black" (click)="viewproduct(row,true)" #tooltip="matTooltip"
           matTooltip="View">
           <mat-icon>visibility</mat-icon>
@@ -92,7 +101,7 @@
     </tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </div>
 
 

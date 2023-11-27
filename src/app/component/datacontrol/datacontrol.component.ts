@@ -76,7 +76,15 @@ export class DatacontrolComponent implements OnInit, AfterViewInit {
       }
     })
   }
-
+  openDialog(template:any){
+    const dialogref = this.dialog.open(template,{
+      width:'400px',
+      height:'150px'
+    })
+  }
+  closeDialog(){
+    const dialogref = this.dialog.closeAll()
+  }
   showproduct() {
     this.productservice.showproduct().subscribe({
       next: (res) => {
@@ -103,6 +111,7 @@ export class DatacontrolComponent implements OnInit, AfterViewInit {
       next: (res) => {
         console.log('Deleted product of id ' + id)
         this.showproduct()
+        this.closeDialog()
       },
       error: console.log,
     })

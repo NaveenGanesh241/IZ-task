@@ -83,7 +83,7 @@
                 </mat-form-field>
 
 
-                <mat-form-field appearance="outline" style="width:23%">
+                <!-- <mat-form-field appearance="outline" style="width:23%">
                     <mat-label>Like Value</mat-label>
                     <input matInput type="text" formControlName="like" 
                         [ngClass]="{error : getcontrol('like')?.errors && getcontrol('like')?.touched}"
@@ -91,7 +91,7 @@
                     <div *ngIf="getcontrol('like')?.errors && getcontrol('like')?.touched">
                         <small class="warn" *ngIf="getcontrol('size')?.errors?.['required']">Enter like value</small>
                     </div>
-                </mat-form-field>
+                </mat-form-field> -->
             </div>
             <div mat-dialog-actions class="btns">
                 <button mat-raised-button type="button" [mat-dialog-close]="false" class="btn1">Cancel</button>

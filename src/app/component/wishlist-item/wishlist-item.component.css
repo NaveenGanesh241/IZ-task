@@ -1,0 +1,42 @@
+.list {
+    background-color: rgba(180, 204, 182, 0.467);
+    width: 170px;
+    /* border-radius: 5%; */
+    border: 0px solid;
+    margin: 13px;
+    font-size: x-small;
+}
+
+.list:hover {
+    border: 1px solid black;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.in{
+    
+    margin:auto;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: -10px;
+}
+.img{
+    width:150px;
+     border-radius:5% ;
+      height:150px;
+      margin:auto;
+      margin-top:10px
+}
+.btn{
+    height:20px;
+    width:20px;
+}
+.actiondiv{
+    margin-left: 50px;
+}
+.icon{
+    margin-left:20px;
+    font-size: 20px;
+    cursor: pointer;
+}

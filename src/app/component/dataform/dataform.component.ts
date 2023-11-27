@@ -19,7 +19,6 @@ export class DataformComponent implements OnInit {
 
   ngOnInit(): void {
     this.productdetail.patchValue(this.data.data)
-    console.log(this.data)
     this.value1 = this.data?.value
   }
   val: boolean = true;
@@ -31,7 +30,7 @@ export class DataformComponent implements OnInit {
     offer: new FormControl("", [Validators.required]),
     stock: new FormControl("", [Validators.required]),
     size: new FormControl("", [Validators.required]),
-    like: new FormControl("",[Validators.required])
+    like: new FormControl("")
   })
 
   getcontrol(name: any): AbstractControl | null {
