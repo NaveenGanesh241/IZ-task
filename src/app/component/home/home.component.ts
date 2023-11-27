@@ -9,8 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   ngOnInit(): void {
     let enclogin = this.url.snapshot.params['login'];
-    console.log(atob(enclogin))
-
   }
   constructor(private url: ActivatedRoute) {
 

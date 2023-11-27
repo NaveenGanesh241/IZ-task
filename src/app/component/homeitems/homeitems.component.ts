@@ -16,7 +16,6 @@ export class HomeitemsComponent implements OnInit {
     this.productservice.showproduct().subscribe({
       next: (res) => {
         this.products = res
-        console.log(this.products)
       },
       error: console.log
     })

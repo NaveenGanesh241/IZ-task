@@ -11,12 +11,17 @@ export class WishlistComponent implements OnInit {
     this.getproduct()
   }
   products:any
+  likeCount:number=0
   constructor(private productservice:ProductService){}
   getproduct() {
     this.productservice.showproduct().subscribe({
       next: (res) => {
         this.products = res
-        console.log(this.products)
+        this.products.forEach((element:any) => {
+          if(element.like==true){
+            this.likeCount=this.likeCount+1
+          }
+        });
       },
       error: console.log
     })

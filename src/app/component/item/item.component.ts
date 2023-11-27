@@ -11,10 +11,11 @@ export class ItemComponent implements OnInit {
 
 
   @Input() products: any
-  likeicon: string = " "
+  likeicon: string = " ";
+  likevalue!: boolean
   ngOnInit(): void {
-    console.log(this.products.like)
-    if (this.products.like === true) {
+    this.likevalue=this.products.like
+    if (this.products.like == true) {
       this.likeicon = "favorite"
     }
     else{
@@ -22,38 +23,20 @@ export class ItemComponent implements OnInit {
     }
 
   }
-  likevalue!: boolean
   
-
-  localstr: any = localStorage.getItem('Array');
-  localarray = JSON.parse(this.localstr)
-
-
   constructor(private service: WishlistService) { }
 
-  default(val: any) {
-    // console.log(this.localarray);
-    // console.log(val)
-    // console.log(this.localarray.includes(val))
-    if (this.localarray.includes(val)) {
-      this.likeicon = "favorite"
-    }
-  }
 
   like(val: any) {
     this.likevalue = !this.likevalue
     if (this.likevalue === true) {
       this.likeicon = " favorite"
-      console.log(val.like)
       this.service.updatelike(val.id).subscribe((data)=>{
-        console.log(data)
       })
     }
     else {
       this.likeicon = "favorite_border";
-      console.log(val)
       this.service.updatelike2(val.id).subscribe((data)=>{
-        console.log(data)
       })
     }
 

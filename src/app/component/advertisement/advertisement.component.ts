@@ -1,4 +1,5 @@
 import { Component , OnInit } from '@angular/core';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-advertisement',
@@ -8,7 +9,9 @@ import { Component , OnInit } from '@angular/core';
 export class AdvertisementComponent implements OnInit {
 adi:any = [];
 index:number = 0;
+constructor(private ps:ProductService){}
 ngOnInit(): void {
+  this.adfn()
   setInterval(()=>{
     this.adfn();
   },2000)

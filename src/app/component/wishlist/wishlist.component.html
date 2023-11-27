@@ -3,3 +3,6 @@
 <div style="display: flex;">
     <app-wishlist-item *ngFor="let item of products" [products]="item"></app-wishlist-item>
 </div>
+<div style="display: flex; justify-content: center; align-content: center;">
+    <h1 *ngIf="likeCount == 0"> No items added in wishlist</h1>
+</div>
