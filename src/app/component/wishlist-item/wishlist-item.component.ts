@@ -9,18 +9,19 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class WishlistItemComponent {
 @Input()products:any
+@Input()navCatFromParent="";
+
 likeicon: string = " ";
-likevalue!: boolean
+likevalue!: boolean;
 ngOnInit(): void {
   this.likevalue =this.products.like
   if (this.products.like === true) {
-    console.log(this.products)
     this.likeicon = "favorite"
   }
   else{
     this.likeicon="favorite_border"
   }
-
+console.log(this.navCatFromParent)
 }
 
 constructor(private service: WishlistService, private location:ActivatedRoute,

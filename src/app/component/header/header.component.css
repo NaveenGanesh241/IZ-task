@@ -10,14 +10,15 @@
     font-size: 200%;
     margin-left: 10px;
     font-weight: bold;  
-    margin-top: 20px;
+    margin-top: -20px ;
     text-decoration: none;
     color:white;
 }
 
 nav {
-    float: right;
+    float: left;
     margin-top: 16px;
+    display:flex;
 }
 
 nav a {
@@ -25,13 +26,12 @@ nav a {
     color: white;
     padding: 20px;
 }
-
 .matbtn {
-    height: 35px;
-    background-color: rgba(39, 3, 28, 0.582);
-    border: 2px solid rgb(255, 255, 255);
-    margin-right: 5px;
-    margin-top: 7px;
+    /* height: 35px; */
+    /* background-color: rgba(39, 3, 28, 0.582); */
+    /* border: 2px solid rgb(255, 255, 255); */
+    margin-right: 30px;
+    margin-top: 13px;
     float:right;
 }
 

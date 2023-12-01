@@ -24,6 +24,7 @@ export class DatacontrolComponent implements OnInit, AfterViewInit {
     'image',
     'price',
     'offer',
+    'catageory',
     'stock',
     'size',
     'actions'

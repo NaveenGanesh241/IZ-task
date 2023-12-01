@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ProductService } from 'src/app/service/product.service';
 
+
 @Component({
   selector: 'app-dataform',
   templateUrl: './dataform.component.html',
@@ -22,6 +23,7 @@ export class DataformComponent implements OnInit {
     this.value1 = this.data?.value
   }
   val: boolean = true;
+  catList = ["Men","Women","Kids","Unisex"];
   productdetail = new FormGroup({
     brand: new FormControl("", [Validators.required]),
     productname: new FormControl("", [Validators.required]),
@@ -30,7 +32,8 @@ export class DataformComponent implements OnInit {
     offer: new FormControl("", [Validators.required]),
     stock: new FormControl("", [Validators.required]),
     size: new FormControl("", [Validators.required]),
-    like: new FormControl("")
+    like: new FormControl(""),
+    catageory: new FormControl("",[Validators.required])
   })
 
   getcontrol(name: any): AbstractControl | null {

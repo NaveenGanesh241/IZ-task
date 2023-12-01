@@ -27,7 +27,8 @@
       "offer": "40%",
       "stock": "130",
       "size": "S, M, L, Xl, XXl",
-      "like": false,
+      "like": true,
+      "catageory": "Men",
       "id": 1
     },
     {
@@ -39,6 +40,7 @@
       "stock": "18",
       "size": "7,8,9,10",
       "like": false,
+      "catageory": "Men",
       "id": 2
     },
     {
@@ -49,7 +51,8 @@
       "offer": "14%",
       "stock": "54",
       "size": "32.34.36,38",
-      "like": false,
+      "like": true,
+      "catageory": "Men",
       "id": 3
     },
     {
@@ -61,6 +64,7 @@
       "stock": "88",
       "size": "S,M,L,XL,XXL",
       "like": false,
+      "catageory": "Men",
       "id": 4
     },
     {
@@ -72,7 +76,44 @@
       "stock": "34",
       "size": "S,M,L,XL",
       "like": false,
+      "catageory": "Men",
       "id": 5
+    },
+    {
+      "brand": "Kaanchipuram",
+      "productname": "Silk Saree",
+      "image": "https://static.heerfashion.com/public/products/08-2023/2vTC9lnMccM0HtdRTB6pC2cw2fAHpn7Xw9zVXYNO.jpg",
+      "price": "2299",
+      "offer": "19%",
+      "stock": "3",
+      "size": "5.5m",
+      "like": false,
+      "catageory": "Women",
+      "id": 6
+    },
+    {
+      "brand": "Ramraj",
+      "productname": "Kids Dhoti Set",
+      "image": "https://ramrajcotton.in/cdn/shop/files/NewProject_6_9bc48b6d-b080-48ec-aae3-c284457563e4.jpg?v=1693916035&width=900",
+      "price": "699",
+      "offer": "4%",
+      "stock": "12",
+      "size": "3-4 years",
+      "like": true,
+      "catageory": "Kids",
+      "id": 7
+    },
+    {
+      "brand": "Jo's",
+      "productname": "Stoned Neclace ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkljQfW95AExoFq0wqZ5AQ1Ei3RTqaO0AsYqA0b9zVUg&s",
+      "price": "2499",
+      "offer": "10%",
+      "stock": "4",
+      "size": "2 Inch",
+      "like": true,
+      "catageory": "Women",
+      "id": 8
     }
   ],
   "signup": [

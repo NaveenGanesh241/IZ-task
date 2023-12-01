@@ -7,6 +7,7 @@ import { LobbyComponent } from './component/lobby/lobby.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './component/home/home.component';
@@ -73,6 +74,7 @@ import { WishlistItemComponent } from './component/wishlist-item/wishlist-item.c
     MatDividerModule,
     MatTooltipModule,
     MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

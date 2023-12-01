@@ -1,20 +1,21 @@
 <div class="head">
-  <span style="margin-top:20px">
-  <a class="name">Fashion</a></span>
-  <button mat-mini-fab [matMenuTriggerFor]="menu" class="matbtn"><mat-icon
-    style="color:rgb(255, 255, 255); padding: 0px;">perm_identity</mat-icon></button>
+  <a  [matMenuTriggerFor]="menu" class="matbtn"><mat-icon
+    style="color:rgb(255, 255, 255); padding: 0px;">menu</mat-icon></a>
 <mat-menu #menu="matMenu">
   <button mat-menu-item (click)="logout()">LogOut</button>
   <button mat-menu-item (click)="admin()">Admin</button>
 </mat-menu>
   <nav>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">Kids</a>
-    <a href="#">Accessories</a>
-    <a routerLink ="/product/wishlist" class="nav2">Wishlist</a>
-    <a href="#" class="nav2">Cart</a>
+    <!-- <a class="name">Fashion</a> -->
+    <div class="innav">
+      <a routerLink="/product/men">Men</a>
+      <a routerLink="/product/women">Women</a>
+      <a routerLink="/product/kids">Kids</a>
+      <a href="#">Accessories</a>
+      <a routerLink="/product/wishlist">Wishlist</a>
+      <a href="#">Cart</a>
    
+    </div>
   </nav>
   </div>
  

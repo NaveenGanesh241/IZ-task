@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -8,11 +9,17 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class WishlistComponent implements OnInit {
   ngOnInit(): void {
-    this.getproduct()
+    this.productservice.showSpinner();
+    setTimeout(() => {
+      this.productservice.hideSpinner();
+    }, 1000);  
+    this.getproduct();
+    this.route.params.subscribe((params:Params)=>this.navCat=params['nav'])
   }
   products:any
-  likeCount:number=0
-  constructor(private productservice:ProductService){}
+  likeCount:number=0;
+  navCat:string="";
+  constructor(private productservice:ProductService,private route:ActivatedRoute){}
   getproduct() {
     this.productservice.showproduct().subscribe({
       next: (res) => {

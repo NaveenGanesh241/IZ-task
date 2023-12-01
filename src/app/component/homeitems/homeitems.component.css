@@ -1,4 +1,6 @@
 .cont {
-    display: flex;
     margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 0px;    
 }

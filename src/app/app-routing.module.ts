@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'home/:login', component: HomeComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'admin/data', component: DatacontrolComponent},
-  { path: 'product/wishlist', component: WishlistComponent}
+  { path: 'product/:nav', component: WishlistComponent}
 
 ];
 
