@@ -31,7 +31,7 @@ export class LobbyComponent implements OnInit {
     console.log(this.signinForm)
     let enclogin = btoa(JSON.stringify(this.signinForm))
 
-    this.router.navigate([`home/${enclogin}`]);
+    this.router.navigate(['home']);
   }
 
 

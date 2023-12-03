@@ -8,7 +8,7 @@ import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', component: LobbyComponent },
-  { path: 'home/:login', component: HomeComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'admin/data', component: DatacontrolComponent},
   { path: 'product/:nav', component: WishlistComponent}

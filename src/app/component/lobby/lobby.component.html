@@ -22,7 +22,7 @@
 
                     <div class="formin">
                         <label class="inlabel">Password</label>
-                        <input type="password" class="incontrol" id="password" placeholder="password"
+                        <input type="password" class="incontrol" id="password" placeholder="Password"
                             [(ngModel)]="signinForm.password" name="password" #password="ngModel" required minlength="8"
                             maxlength="12">
                         <div *ngIf="password.errors && password.touched">

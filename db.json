@@ -29,6 +29,7 @@
       "size": "S, M, L, Xl, XXl",
       "like": true,
       "catageory": "Men",
+      "isCart": false,
       "id": 1
     },
     {
@@ -39,8 +40,9 @@
       "offer": "12%",
       "stock": "18",
       "size": "7,8,9,10",
-      "like": false,
+      "like": true,
       "catageory": "Men",
+      "isCart": false,
       "id": 2
     },
     {
@@ -53,18 +55,20 @@
       "size": "32.34.36,38",
       "like": true,
       "catageory": "Men",
+      "isCart": false,
       "id": 3
     },
     {
       "brand": "TeamSpirit",
       "productname": "T shirt",
-      "image": "https://assets.ajio.com/medias/sys_master/root/h64/hef/15203076440094/-473Wx593H-441031708-olive-MODEL.jpg",
+      "image": "https://assets.ajio.com/medias/sys_master/root/hac/h0b/15203088367646/-1117Wx1400H-441031708-olive-MODEL3.jpg",
       "price": "399",
       "offer": "8%",
       "stock": "88",
       "size": "S,M,L,XL,XXL",
-      "like": false,
+      "like": true,
       "catageory": "Men",
+      "isCart": false,
       "id": 4
     },
     {
@@ -77,6 +81,7 @@
       "size": "S,M,L,XL",
       "like": false,
       "catageory": "Men",
+      "isCart": false,
       "id": 5
     },
     {
@@ -89,6 +94,7 @@
       "size": "5.5m",
       "like": false,
       "catageory": "Women",
+      "isCart": false,
       "id": 6
     },
     {
@@ -101,6 +107,7 @@
       "size": "3-4 years",
       "like": true,
       "catageory": "Kids",
+      "isCart": false,
       "id": 7
     },
     {
@@ -113,6 +120,7 @@
       "size": "2 Inch",
       "like": true,
       "catageory": "Women",
+      "isCart": false,
       "id": 8
     }
   ],
