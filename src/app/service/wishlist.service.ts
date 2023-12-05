@@ -21,4 +21,14 @@ export class WishlistService {
     const update={like:false}
     return this.http.patch(`http://localhost:3000/product/${id}`,update)
   }
+
+  updateCart(id:any): Observable<any>{
+    const update={isCart:true}
+   return this.http.patch(`http://localhost:3000/product/${id}`,update)
+  }
+  updateCart1(id:any):Observable<any>
+  {
+    const update={isCart:false}
+    return this.http.patch(`http://localhost:3000/product/${id}`,update)
+  }
 }

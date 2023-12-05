@@ -1,5 +1,5 @@
 import { Component ,Input} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { WishlistService } from 'src/app/service/wishlist.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
@@ -13,15 +13,26 @@ export class WishlistItemComponent {
 
 likeicon: string = " ";
 likevalue!: boolean;
+cartIcon:string =" "
+cartValue!:boolean
+
 ngOnInit(): void {
   this.likevalue =this.products.like
+  this.cartValue=this.products.isCart
   if (this.products.like === true) {
     this.likeicon = "favorite"
   }
   else{
     this.likeicon="favorite_border"
   }
-console.log(this.navCatFromParent)
+  if (this.products.isCart == true) {
+    this.cartIcon = "remove_shopping_cart"
+  }
+  else{
+    this.cartIcon="add_shopping_cart"
+  }
+// console.log(this.navCatFromParent)
+
 }
 
 constructor(private service: WishlistService, private location:ActivatedRoute,
@@ -48,6 +59,23 @@ like(val: any) {
       // console.log(data)
     })
   }
+  if(this.navCatFromParent=='wishlist'){
   this.refresh()
+  }
 }
+cart(val:any){
+  console.log(!this.cartValue)
+  this.cartValue = !this.cartValue
+  if (this.cartValue === true) {
+    this.cartIcon = "remove_shopping_cart"
+    this.service.updateCart(val.id).subscribe((data)=>{
+    })
+  }
+  else {
+    this.cartIcon = "add_shopping_cart";
+    this.service.updateCart1(val.id).subscribe((data)=>{
+    })
+  }
+}
+
 }

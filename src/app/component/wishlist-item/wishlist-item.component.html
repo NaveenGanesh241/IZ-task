@@ -12,10 +12,10 @@
                 <mat-icon class="icon" (click)="like(products)">
                     {{likeicon}}
                 </mat-icon>
-    
-                <mat-icon class="icon">
-                    add_shopping_cart
-                </mat-icon>
+
+                    <mat-icon class="icon" (click)="cart(products)">
+                        {{cartIcon}}
+                    </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
@@ -37,8 +37,8 @@
                     {{likeicon}}
                 </mat-icon>
     
-                <mat-icon class="icon">
-                    add_shopping_cart
+                <mat-icon class="icon" (click)="cart(products)">
+                    {{cartIcon}}
                 </mat-icon>
             </div>
         </mat-card-actions>
@@ -61,8 +61,8 @@
                     {{likeicon}}
                 </mat-icon>
     
-                <mat-icon class="icon">
-                    add_shopping_cart
+                <mat-icon class="icon" (click)="cart(products)">
+                    {{cartIcon}}
                 </mat-icon>
             </div>
         </mat-card-actions>
@@ -85,11 +85,34 @@
                     {{likeicon}}
                 </mat-icon>
     
-                <mat-icon class="icon">
-                    add_shopping_cart
+                <mat-icon class="icon" (click)="cart(products)">
+                    {{cartIcon}} 
                 </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
 </div>  
 
+
+<div *ngIf="products.isCart==true && navCatFromParent=='cart' ">
+    <mat-card class="list">
+        <img src="{{products.image}}" class="img">
+        <div class="in">
+            <p><b>{{products.brand}}</b> {{products.productname}} <b>₹{{products.price}}</b> </p>
+            <p>"<u>Flat {{products.offer}} offer</u>"</p>
+            <p>{{products.stock}} stocks left</p>
+            <p><b>Size:</b>{{products.size}}</p>
+        </div>
+        <mat-card-actions style="margin-top: -15px;margin-bottom: -5px;">
+            <div class="actiondiv">
+                <mat-icon class="icon" (click)="like(products)">
+                    {{likeicon}}
+                </mat-icon>
+    
+                <mat-icon class="icon" (click)="cart(products)">
+                    {{cartIcon}} 
+                </mat-icon>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>  

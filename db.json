@@ -29,7 +29,7 @@
       "size": "S, M, L, Xl, XXl",
       "like": true,
       "catageory": "Men",
-      "isCart": false,
+      "isCart": true,
       "id": 1
     },
     {
@@ -40,7 +40,7 @@
       "offer": "12%",
       "stock": "18",
       "size": "7,8,9,10",
-      "like": true,
+      "like": false,
       "catageory": "Men",
       "isCart": false,
       "id": 2
@@ -53,9 +53,9 @@
       "offer": "14%",
       "stock": "54",
       "size": "32.34.36,38",
-      "like": true,
+      "like": false,
       "catageory": "Men",
-      "isCart": false,
+      "isCart": true,
       "id": 3
     },
     {
@@ -66,7 +66,7 @@
       "offer": "8%",
       "stock": "88",
       "size": "S,M,L,XL,XXL",
-      "like": true,
+      "like": false,
       "catageory": "Men",
       "isCart": false,
       "id": 4
@@ -92,7 +92,7 @@
       "offer": "19%",
       "stock": "3",
       "size": "5.5m",
-      "like": false,
+      "like": true,
       "catageory": "Women",
       "isCart": false,
       "id": 6
@@ -105,7 +105,7 @@
       "offer": "4%",
       "stock": "12",
       "size": "3-4 years",
-      "like": true,
+      "like": false,
       "catageory": "Kids",
       "isCart": false,
       "id": 7
@@ -118,7 +118,7 @@
       "offer": "10%",
       "stock": "4",
       "size": "2 Inch",
-      "like": true,
+      "like": false,
       "catageory": "Women",
       "isCart": false,
       "id": 8

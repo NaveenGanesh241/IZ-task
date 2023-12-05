@@ -12,14 +12,23 @@ export class ItemComponent implements OnInit {
 
   @Input() products: any
   likeicon: string = " ";
+  cartIcon:string =" "
   likevalue!: boolean
+  cartValue!:boolean
   ngOnInit(): void {
     this.likevalue=this.products.like
+    this.cartValue=this.products.isCart
     if (this.products.like == true) {
       this.likeicon = "favorite"
     }
     else{
       this.likeicon="favorite_border"
+    }
+    if (this.products.isCart == true) {
+      this.cartIcon = "remove_shopping_cart"
+    }
+    else{
+      this.cartIcon="add_shopping_cart"
     }
 
   }
@@ -40,6 +49,21 @@ export class ItemComponent implements OnInit {
       })
     }
 
+  }
+
+  cart(val:any){
+    // console.log(!this.cartValue)
+    this.cartValue = !this.cartValue
+    if (this.cartValue === true) {
+      this.cartIcon = "remove_shopping_cart"
+      this.service.updateCart(val.id).subscribe((data)=>{
+      })
+    }
+    else {
+      this.cartIcon = "add_shopping_cart";
+      this.service.updateCart1(val.id).subscribe((data)=>{
+      })
+    }
   }
 }
 
