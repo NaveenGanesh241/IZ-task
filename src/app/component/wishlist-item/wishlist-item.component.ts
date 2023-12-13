@@ -50,6 +50,7 @@ like(val: any) {
     this.likeicon = " favorite"
     this.service.updatelike(val.id).subscribe((data)=>{
       // console.log(data)
+      window.location.reload()
     })
   }
   else {
@@ -57,6 +58,7 @@ like(val: any) {
     console.log(val)
     this.service.updatelike2(val.id).subscribe((data)=>{
       // console.log(data)
+      window.location.reload()
     })
   }
   if(this.navCatFromParent=='wishlist'){
@@ -69,12 +71,17 @@ cart(val:any){
   if (this.cartValue === true) {
     this.cartIcon = "remove_shopping_cart"
     this.service.updateCart(val.id).subscribe((data)=>{
+      window.location.reload()
     })
   }
   else {
     this.cartIcon = "add_shopping_cart";
     this.service.updateCart1(val.id).subscribe((data)=>{
+      window.location.reload()
     })
+  }
+  if(this.navCatFromParent=='cart'){
+  this.refresh()
   }
 }
 
