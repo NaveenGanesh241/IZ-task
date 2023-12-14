@@ -15,6 +15,8 @@ likeicon: string = " ";
 likevalue!: boolean;
 cartIcon:string =" "
 cartValue!:boolean
+count=1
+sizeList!:any[]
 
 ngOnInit(): void {
   this.likevalue =this.products.like
@@ -32,7 +34,7 @@ ngOnInit(): void {
     this.cartIcon="add_shopping_cart"
   }
 // console.log(this.navCatFromParent)
-
+this.sizeList=this.products.size.split(',')
 }
 
 constructor(private service: WishlistService, private location:ActivatedRoute,
@@ -42,6 +44,14 @@ refresh():void{
   this.spinner.show()
   window.location.reload()
   this.spinner.hide()
+}
+increase(){
+  this.count++
+}
+decrease(){
+  if(this.count>1){
+  this.count--
+  }
 }
 like(val: any) {
   console.log(val)

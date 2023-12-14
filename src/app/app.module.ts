@@ -35,6 +35,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AdvertisementComponent } from './component/advertisement/advertisement.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { WishlistItemComponent } from './component/wishlist-item/wishlist-item.component';
+import {MatRadioModule} from '@angular/material/radio';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +76,8 @@ import { WishlistItemComponent } from './component/wishlist-item/wishlist-item.c
     MatDividerModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],

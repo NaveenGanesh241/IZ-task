@@ -41,4 +41,23 @@ p {
     font-size: 20px;
     cursor: pointer;
 }
+.listCart {
+    background-color: rgba(180, 204, 182, 0.467);
+    width: 60%;
+    /* border-radius: 5%; */
+    border: 0px solid;
+    margin:15px auto;
+    font-size: x-small;
+}
+
+.action{
+    margin:auto ;
+    display: flex;
+    flex-direction: column;
+}
+.imgCart{
+    width:150px;
+    height:150px;
+    padding:15px ;
+}
 
