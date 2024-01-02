@@ -17,6 +17,7 @@ cartIcon:string =" "
 cartValue!:boolean
 count=1
 sizeList!:any[]
+orderForm!:any
 
 ngOnInit(): void {
   this.likevalue =this.products.like
@@ -35,6 +36,7 @@ ngOnInit(): void {
   }
 // console.log(this.navCatFromParent)
 this.sizeList=this.products.size.split(',')
+
 }
 
 constructor(private service: WishlistService, private location:ActivatedRoute,

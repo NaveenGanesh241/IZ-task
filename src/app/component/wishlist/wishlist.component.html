@@ -7,5 +7,13 @@
     <h1 *ngIf="likeCount == 0 && navCat=='wishlist'"> No items added in wishlist</h1>
 </div>
 <div style="display: flex;flex-direction: column;" *ngIf="navCat=='cart'">
+    <div style="display: flex;">
+        <h2 style="margin-left:20%;margin-top: 20px;" *ngIf="cartCount > 0"><b>Cart Items</b></h2>
+        <div class="action">
+            <!-- <button mat-raised-button style="color:red ;margin-right: 15px;" (click)="removeAllFromCart(products)" *ngIf="cartCount > 0"><b>Remove all</b></button> -->
+            <button mat-raised-button style="color:rgb(4, 104, 66)" *ngIf="cartCount > 0"><b>Order all</b></button>
+        </div>
+    </div>
+        <h1 *ngIf="cartCount == 0 && navCat=='cart'" style="display: flex;justify-content: center;align-items: center;"> No items added in Cart</h1>
     <app-wishlist-item *ngFor="let item of products" [products]="item" [navCatFromParent]="navCat" ></app-wishlist-item>
 </div>

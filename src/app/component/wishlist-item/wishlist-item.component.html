@@ -13,13 +13,13 @@
                     {{likeicon}}
                 </mat-icon>
 
-                    <mat-icon class="icon" (click)="cart(products)">
-                        {{cartIcon}}
-                    </mat-icon>
+                <mat-icon class="icon" (click)="cart(products)">
+                    {{cartIcon}}
+                </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
-</div>   
+</div>
 
 
 <div *ngIf="(products.catageory=='Men' || products.catageory=='Unisex') && navCatFromParent=='men' ">
@@ -36,14 +36,14 @@
                 <mat-icon class="icon" (click)="like(products)">
                     {{likeicon}}
                 </mat-icon>
-    
+
                 <mat-icon class="icon" (click)="cart(products)">
                     {{cartIcon}}
                 </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
-</div>   
+</div>
 
 
 <div *ngIf="(products.catageory=='Women' || products.catageory=='Unisex') && navCatFromParent=='women' ">
@@ -60,14 +60,14 @@
                 <mat-icon class="icon" (click)="like(products)">
                     {{likeicon}}
                 </mat-icon>
-    
+
                 <mat-icon class="icon" (click)="cart(products)">
                     {{cartIcon}}
                 </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
-</div>  
+</div>
 
 
 <div *ngIf="products.catageory=='Kids' && navCatFromParent=='kids' ">
@@ -84,14 +84,14 @@
                 <mat-icon class="icon" (click)="like(products)">
                     {{likeicon}}
                 </mat-icon>
-    
+
                 <mat-icon class="icon" (click)="cart(products)">
-                    {{cartIcon}} 
+                    {{cartIcon}}
                 </mat-icon>
             </div>
         </mat-card-actions>
     </mat-card>
-</div>  
+</div>
 
 
 <div *ngIf="products.isCart==true && navCatFromParent=='cart' ">
@@ -99,36 +99,24 @@
         <div style="display: flex;">
             <img src="{{products.image}}" class="imgCart">
             <div style="margin: auto 5%; width: 50%">
-            <h3><b>{{products.brand}} {{products.productname}}</b></h3>
-            <mat-radio-button *ngFor="let size of sizeList" [value]="size">{{size}}</mat-radio-button>
-            <div style="display: flex;margin-top: 10px;">
-                <button mat-mini-fab color="gray" (click)="decrease()"><b>-</b></button>
-                <h4 style="padding: 0px 20px; margin-top: 5px;">{{count}}</h4>
-                <button mat-mini-fab color="gray" (click)="increase()"><b>+</b></button>
-                <h4 style="margin: 10px 0px 0px 10px;color:rgb(4, 104, 66)"><b>Price: ₹{{products.price * count}}</b></h4>
-            </div>
+                <h3><b>{{products.brand}} {{products.productname}}</b></h3>
+                <mat-label>Size</mat-label>
+                <mat-radio-group>
+                    <mat-radio-button *ngFor="let size of sizeList" [value]="size">{{size}}</mat-radio-button>
+                </mat-radio-group>
+                <div style="display: flex;margin-top: 10px;">
+                    <button mat-mini-fab color="gray" (click)="decrease()"><b>-</b></button>
+                    <h4 style="padding: 0px 20px; margin-top: 5px;">{{count}}</h4>
+                    <button mat-mini-fab color="gray" (click)="increase()"><b>+</b></button>
+                    <h4 style="margin: 10px 0px 0px 10px;color:rgb(4, 104, 66)"><b>Price:
+                            ₹{{products.price * count}}</b></h4>
+                </div>
             </div>
             <div class="action">
-                <button mat-raised-button style="color:red ;margin-bottom:20px"><b>Remove</b></button>
-                <button mat-raised-button style="color:rgb(4, 104, 66)"><b>Buy</b></button>
+                <button mat-raised-button style="color:red ;margin-bottom:20px"
+                    (click)="cart(products)"><b>Remove</b></button>
+                <button mat-raised-button style="color:rgb(4, 104, 66)"><b>Check Out</b></button>
             </div>
         </div>
-        <!-- <div class="in">
-            <p><b>{{products.brand}}</b> {{products.productname}} <b>₹{{products.price}}</b> </p>
-            <p>"<u>Flat {{products.offer}} offer</u>"</p>
-            <p>{{products.stock}} stocks left</p>
-            <p><b>Size:</b>{{products.size}}</p>
-        </div> -->
-        <!-- <mat-card-actions style="margin-top: -15px;margin-bottom: -5px;">
-            <div class="actiondiv">
-                <mat-icon class="icon" (click)="like(products)">
-                    {{likeicon}}
-                </mat-icon>
-    
-                <mat-icon class="icon" (click)="cart(products)">
-                    {{cartIcon}} 
-                </mat-icon>
-            </div>
-        </mat-card-actions> -->
     </mat-card>
-</div>  
+</div>

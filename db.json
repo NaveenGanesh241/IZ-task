@@ -53,9 +53,9 @@
       "offer": "14%",
       "stock": "54",
       "size": "32,34,36,38",
-      "like": false,
+      "like": true,
       "catageory": "Men",
-      "isCart": false,
+      "isCart": true,
       "id": 3
     },
     {
@@ -107,7 +107,7 @@
       "size": "3-4 years",
       "like": false,
       "catageory": "Kids",
-      "isCart": true,
+      "isCart": false,
       "id": 7
     },
     {
