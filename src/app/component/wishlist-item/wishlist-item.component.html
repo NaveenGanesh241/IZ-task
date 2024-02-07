@@ -96,17 +96,21 @@
 
 <div *ngIf="products.isCart==true && navCatFromParent=='cart' ">
     <mat-card class="listCart">
+        <form [formGroup]="orderForm">
         <div style="display: flex;">
             <img src="{{products.image}}" class="imgCart">
             <div style="margin: auto 5%; width: 50%">
                 <h3><b>{{products.brand}} {{products.productname}}</b></h3>
-                <mat-label>Size</mat-label>
-                <mat-radio-group>
+                <mat-label><b>Size:</b></mat-label>
+                <mat-radio-group formControlName="productSize">
                     <mat-radio-button *ngFor="let size of sizeList" [value]="size">{{size}}</mat-radio-button>
                 </mat-radio-group>
+                <div *ngIf="getcontrol('productSize')?.errors">
+                    <p style="color: red;">Size is required</p>
+                </div>
                 <div style="display: flex;margin-top: 10px;">
                     <button mat-mini-fab color="gray" (click)="decrease()"><b>-</b></button>
-                    <h4 style="padding: 0px 20px; margin-top: 5px;">{{count}}</h4>
+                    <h4  style="padding: 0px 20px; margin-top: 5px;">{{count}}</h4>
                     <button mat-mini-fab color="gray" (click)="increase()"><b>+</b></button>
                     <h4 style="margin: 10px 0px 0px 10px;color:rgb(4, 104, 66)"><b>Price:
                             ₹{{products.price * count}}</b></h4>
@@ -115,8 +119,10 @@
             <div class="action">
                 <button mat-raised-button style="color:red ;margin-bottom:20px"
                     (click)="cart(products)"><b>Remove</b></button>
-                <button mat-raised-button style="color:rgb(4, 104, 66)"><b>Check Out</b></button>
+                <button mat-raised-button style="color:rgb(4, 104, 66)" 
+                (click)="orderForm.status!=='INVALID' && orderProduct()"><b>Check Out</b></button>
             </div>
         </div>
+    </form>
     </mat-card>
 </div>

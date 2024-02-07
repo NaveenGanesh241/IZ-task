@@ -2,6 +2,8 @@ import { Component ,Input} from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { WishlistService } from 'src/app/service/wishlist.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { OrderService } from 'src/app/service/order.service';
 @Component({
   selector: 'app-wishlist-item',
   templateUrl: './wishlist-item.component.html',
@@ -17,7 +19,7 @@ cartIcon:string =" "
 cartValue!:boolean
 count=1
 sizeList!:any[]
-orderForm!:any
+// orderForm!:any
 
 ngOnInit(): void {
   this.likevalue =this.products.like
@@ -38,10 +40,37 @@ ngOnInit(): void {
 this.sizeList=this.products.size.split(',')
 
 }
+orderForm = new FormGroup({
+  productName: new FormControl(""),
+  price: new FormControl(0),
+  productSize: new FormControl("", [Validators.required]),
+  quantity: new FormControl(1),
 
+})
 constructor(private service: WishlistService, private location:ActivatedRoute,
-  private spinner:NgxSpinnerService ) { }
+  private spinner:NgxSpinnerService,private os:OrderService ) { }
 
+  orderProduct(){
+    this.orderForm.value.productName = this.products.brand +" "+this.products.productname
+    this.orderForm.value.quantity = this.count
+    this.orderForm.value.price =this.products.price * this.count
+
+    const postData = this.orderForm.value 
+    if(this.orderForm.valid){
+      this.os.placeOrder(postData).subscribe({
+        next: (val: any) => {
+          console.log("Order Placed Successfully")
+        },
+        error:console.log
+      })
+    }
+  }
+
+  getcontrol(name: any): AbstractControl | null {
+    return this.orderForm.get(name)
+
+
+  }
 refresh():void{
   this.spinner.show()
   window.location.reload()
@@ -96,5 +125,4 @@ cart(val:any){
   this.refresh()
   }
 }
-
 }
